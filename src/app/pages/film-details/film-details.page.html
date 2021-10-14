@@ -4,12 +4,23 @@
             <ion-back-button defaultHref="/tabs/films"></ion-back-button>
         </ion-buttons>
         <ion-title>{{ film?.title }}</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+                <ion-icon name="star" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
+                <ion-icon name="star-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" *ngIf="film">
 
     <ion-card *ngIf="film?.opening_crawl">
+        <ion-card-header>
+            <ion-card-title>{{ film?.title }}</ion-card-title>
+        </ion-card-header>
         <ion-card-content>
             {{ film?.opening_crawl }}
         </ion-card-content>

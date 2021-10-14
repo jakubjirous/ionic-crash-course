@@ -240,7 +240,7 @@
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/router */
       29535);
       /* harmony import */
@@ -267,6 +267,12 @@
       var _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @ionic-native/email-composer/ngx */
       93320);
+      /* harmony import */
+
+
+      var _ionic_storage_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @ionic/storage-angular */
+      32966);
 
       var _AppModule = function AppModule() {
         _classCallCheck(this, AppModule);
@@ -275,9 +281,9 @@
       _AppModule = (0, tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([(0, _angular_core__WEBPACK_IMPORTED_MODULE_4__.NgModule)({
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpClientModule],
+        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule, _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicModule.forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule, _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpClientModule, _ionic_storage_angular__WEBPACK_IMPORTED_MODULE_8__.IonicStorageModule.forRoot()],
         providers: [{
-          provide: _angular_router__WEBPACK_IMPORTED_MODULE_8__.RouteReuseStrategy,
+          provide: _angular_router__WEBPACK_IMPORTED_MODULE_9__.RouteReuseStrategy,
           useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicRouteStrategy
         }, _ionic_native_email_composer_ngx__WEBPACK_IMPORTED_MODULE_2__.EmailComposer],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent]

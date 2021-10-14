@@ -251,7 +251,7 @@
   dependencies:
     "tslib" "^2.2.0"
 
-"@angular/core@>=8.2.7", "@angular/core@~12.1.1", "@angular/core@12.1.5":
+"@angular/core@*", "@angular/core@>=8.2.7", "@angular/core@~12.1.1", "@angular/core@12.1.5":
   "integrity" "sha512-okXnhAPxfblAWSe5M/IqrSATi+ul83a9o9PWOTFR/XCVcbx+neE2IwIr1dIDKBKj91b1CFalLS+uOSkN05PNkA=="
   "resolved" "https://registry.npmjs.org/@angular/core/-/core-12.1.5.tgz"
   "version" "12.1.5"
@@ -1391,6 +1391,21 @@
     "chalk" "^4.0.0"
     "express" "^4.16.2"
     "tslib" "^2.0.1"
+
+"@ionic/storage-angular@^3.0.6":
+  "integrity" "sha512-ZXlIFWGU27aCxVFgZb0KFJFtWwnn6+HK6v0rMGzjN8f7oV2ewXaQ2dl1gTw/A8YoozTVPOFxwfFHCjhWLFR1Fw=="
+  "resolved" "https://registry.npmjs.org/@ionic/storage-angular/-/storage-angular-3.0.6.tgz"
+  "version" "3.0.6"
+  dependencies:
+    "@ionic/storage" "^3.0.4"
+    "tslib" "^1.10.0"
+
+"@ionic/storage@^3.0.4":
+  "integrity" "sha512-sw+zSJINIpbQCGZR9mEtb9N0WmZLuhcMVqOZJBqLuDACAMdXqG39zmp5nSVqhGI1/9X3nd0K5gVn6icyVfUnUg=="
+  "resolved" "https://registry.npmjs.org/@ionic/storage/-/storage-3.0.6.tgz"
+  "version" "3.0.6"
+  dependencies:
+    "localforage" "^1.9.0"
 
 "@ionic/utils-array@2.1.5":
   "integrity" "sha512-HD72a71IQVBmQckDwmA8RxNVMTbxnaLbgFOl+dO5tbvW9CkkSFCv41h6fUuNsSEVgngfkn0i98HDuZC8mk+lTA=="
@@ -5905,6 +5920,13 @@
   dependencies:
     "immediate" "~3.0.5"
 
+"lie@3.1.1":
+  "integrity" "sha1-mkNrLMd0bKWd56QfpGmz77dr2H4="
+  "resolved" "https://registry.npmjs.org/lie/-/lie-3.1.1.tgz"
+  "version" "3.1.1"
+  dependencies:
+    "immediate" "~3.0.5"
+
 "lilconfig@^2.0.3":
   "integrity" "sha512-EHKqr/+ZvdKCifpNrJCKxBTgk5XupZA3y/aCPY9mxfgBzmgh93Mt/WqjjQ38oMxXuvDokaKiM3lAgvSH2sjtHg=="
   "resolved" "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.3.tgz"
@@ -5947,6 +5969,13 @@
     "big.js" "^5.2.2"
     "emojis-list" "^3.0.0"
     "json5" "^2.1.2"
+
+"localforage@^1.9.0":
+  "integrity" "sha512-14/H1aX7hzBBmmh7sGPd+AOMkkIrHM3Z1PAyGgZigA1H1p5O5ANnMyWzvpAETtG68/dC4pC0ncy3+PPGzXZHPg=="
+  "resolved" "https://registry.npmjs.org/localforage/-/localforage-1.10.0.tgz"
+  "version" "1.10.0"
+  dependencies:
+    "lie" "3.1.1"
 
 "locate-path@^2.0.0":
   "integrity" "sha1-K1aLJl7slExtnA3pw9u7ygNUzY4="
@@ -8286,7 +8315,7 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
-"rxjs@^5.5.0 || ^6.5.0", "rxjs@^6.5.3", "rxjs@^6.6.6", "rxjs@>=6.2.0", "rxjs@~6.6.0", "rxjs@6.6.7":
+"rxjs@*", "rxjs@^5.5.0 || ^6.5.0", "rxjs@^6.5.3", "rxjs@^6.6.6", "rxjs@>=6.2.0", "rxjs@~6.6.0", "rxjs@6.6.7":
   "integrity" "sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ=="
   "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz"
   "version" "6.6.7"

@@ -64,6 +64,7 @@ Services
 ```
 ionic g service services/api
 ionic g service services/utils
+ionic g service services/favorite
 ```
 
 
@@ -71,10 +72,23 @@ ionic g service services/utils
 
 Email Composer - Capacitor
 
+- The plugin provides access to the standard interface that manages the editing and sending an email message.
+- You can use this view controller to display a standard email view inside your application and populate the fields of that view with initial values, such as the subject, email recipients, body text, and attachments.
+- The user can edit the initial contents you specify and choose to send the email or cancel the operation.
+
 ```
 npm install cordova-plugin-email-composer
 npm install @ionic-native/email-composer
 ionic cap sync
+```
+
+Data storage
+
+- A simple key-value Storage module for Ionic apps. 
+- This utility uses the best storage engine available on the platform without having to interact with it directly
+
+```
+npm install @ionic/storage-angular
 ```
 
 ## Links:
