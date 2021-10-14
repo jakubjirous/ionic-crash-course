@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/tabs/people"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ people?.name }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="people">
+    <ion-card *ngIf="people?.height">
+        <ion-card-header>
+            <ion-card-title>Height</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ people?.height }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="people?.mass">
+        <ion-card-header>
+            <ion-card-title>Mass</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ people?.mass }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="people?.hair_color">
+        <ion-card-header>
+            <ion-card-title>Hair color</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ people?.hair_color }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="people?.skin_color">
+        <ion-card-header>
+            <ion-card-title>Skin color</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ people?.skin_color }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="people?.eye_color">
+        <ion-card-header>
+            <ion-card-title>Eye color</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ people?.eye_color }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="people?.birth_year">
+        <ion-card-header>
+            <ion-card-title>Birth year</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ people?.birth_year }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="people?.gender">
+        <ion-card-header>
+            <ion-card-title>Gender</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ people?.gender }}
+        </ion-card-content>
+    </ion-card>
+</ion-content>

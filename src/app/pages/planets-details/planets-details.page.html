@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/tabs/planets"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ planet?.name }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="planet">
+    <ion-card *ngIf="planet?.rotation_period">
+        <ion-card-header>
+            <ion-card-title>Rotation period</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ planet?.rotation_period }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="planet?.orbital_period">
+        <ion-card-header>
+            <ion-card-title>Orbital period</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ planet?.orbital_period }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="planet?.diameter">
+        <ion-card-header>
+            <ion-card-title>Diameter</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ planet?.diameter }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="planet?.climate">
+        <ion-card-header>
+            <ion-card-title>Climate</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ planet?.climate }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="planet?.gravity">
+        <ion-card-header>
+            <ion-card-title>Gravity</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ planet?.gravity }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="planet?.terrain">
+        <ion-card-header>
+            <ion-card-title>Terrain</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ planet?.terrain }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="planet?.surface_water">
+        <ion-card-header>
+            <ion-card-title>Surface water</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ planet?.surface_water }}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="planet?.population">
+        <ion-card-header>
+            <ion-card-title>Population</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{ planet?.population }}
+        </ion-card-content>
+    </ion-card>
+</ion-content>
