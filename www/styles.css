@@ -444,6 +444,12 @@ textarea {
   font: inherit;
   color: inherit;
 }
+textarea::-moz-placeholder {
+  padding-left: 2px;
+}
+textarea:-ms-input-placeholder {
+  padding-left: 2px;
+}
 textarea::placeholder {
   padding-left: 2px;
 }
@@ -541,6 +547,7 @@ html {
   width: 100%;
   height: 100%;
   -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
 }
 html:not(.hydrated) body {
@@ -573,13 +580,16 @@ body {
   word-wrap: break-word;
   overscroll-behavior-y: none;
   -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
           text-size-adjust: none;
 }
 html {
+  font-family: var(--ion-default-font);
   font-family: var(--ion-font-family);
 }
 a {
   background-color: transparent;
+  color: #3880ff;
   color: var(--ion-color-primary, #3880ff);
 }
 h1,
@@ -694,64 +704,94 @@ sub {
   --padding-end: var(--ion-padding, 16px);
   --padding-top: var(--ion-padding, 16px);
   --padding-bottom: var(--ion-padding, 16px);
+  padding-left: 16px;
   padding-left: var(--ion-padding, 16px);
+  padding-right: 16px;
   padding-right: var(--ion-padding, 16px);
+  padding-top: 16px;
   padding-top: var(--ion-padding, 16px);
+  padding-bottom: 16px;
   padding-bottom: var(--ion-padding, 16px);
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .ion-padding {
     padding-left: unset;
     padding-right: unset;
+    -webkit-padding-start: 16px;
+    -webkit-padding-start: var(--ion-padding, 16px);
+    padding-inline-start: 16px;
     padding-inline-start: var(--ion-padding, 16px);
+    -webkit-padding-end: 16px;
+    -webkit-padding-end: var(--ion-padding, 16px);
+    padding-inline-end: 16px;
     padding-inline-end: var(--ion-padding, 16px);
   }
 }
 .ion-padding-top {
   --padding-top: var(--ion-padding, 16px);
+  padding-top: 16px;
   padding-top: var(--ion-padding, 16px);
 }
 .ion-padding-start {
   --padding-start: var(--ion-padding, 16px);
+  padding-left: 16px;
   padding-left: var(--ion-padding, 16px);
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .ion-padding-start {
     padding-left: unset;
+    -webkit-padding-start: 16px;
+    -webkit-padding-start: var(--ion-padding, 16px);
+    padding-inline-start: 16px;
     padding-inline-start: var(--ion-padding, 16px);
   }
 }
 .ion-padding-end {
   --padding-end: var(--ion-padding, 16px);
+  padding-right: 16px;
   padding-right: var(--ion-padding, 16px);
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .ion-padding-end {
     padding-right: unset;
+    -webkit-padding-end: 16px;
+    -webkit-padding-end: var(--ion-padding, 16px);
+    padding-inline-end: 16px;
     padding-inline-end: var(--ion-padding, 16px);
   }
 }
 .ion-padding-bottom {
   --padding-bottom: var(--ion-padding, 16px);
+  padding-bottom: 16px;
   padding-bottom: var(--ion-padding, 16px);
 }
 .ion-padding-vertical {
   --padding-top: var(--ion-padding, 16px);
   --padding-bottom: var(--ion-padding, 16px);
+  padding-top: 16px;
   padding-top: var(--ion-padding, 16px);
+  padding-bottom: 16px;
   padding-bottom: var(--ion-padding, 16px);
 }
 .ion-padding-horizontal {
   --padding-start: var(--ion-padding, 16px);
   --padding-end: var(--ion-padding, 16px);
+  padding-left: 16px;
   padding-left: var(--ion-padding, 16px);
+  padding-right: 16px;
   padding-right: var(--ion-padding, 16px);
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .ion-padding-horizontal {
     padding-left: unset;
     padding-right: unset;
+    -webkit-padding-start: 16px;
+    -webkit-padding-start: var(--ion-padding, 16px);
+    padding-inline-start: 16px;
     padding-inline-start: var(--ion-padding, 16px);
+    -webkit-padding-end: 16px;
+    -webkit-padding-end: var(--ion-padding, 16px);
+    padding-inline-end: 16px;
     padding-inline-end: var(--ion-padding, 16px);
   }
 }
@@ -770,64 +810,94 @@ sub {
   --margin-end: var(--ion-margin, 16px);
   --margin-top: var(--ion-margin, 16px);
   --margin-bottom: var(--ion-margin, 16px);
+  margin-left: 16px;
   margin-left: var(--ion-margin, 16px);
+  margin-right: 16px;
   margin-right: var(--ion-margin, 16px);
+  margin-top: 16px;
   margin-top: var(--ion-margin, 16px);
+  margin-bottom: 16px;
   margin-bottom: var(--ion-margin, 16px);
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .ion-margin {
     margin-left: unset;
     margin-right: unset;
+    -webkit-margin-start: 16px;
+    -webkit-margin-start: var(--ion-margin, 16px);
+    margin-inline-start: 16px;
     margin-inline-start: var(--ion-margin, 16px);
+    -webkit-margin-end: 16px;
+    -webkit-margin-end: var(--ion-margin, 16px);
+    margin-inline-end: 16px;
     margin-inline-end: var(--ion-margin, 16px);
   }
 }
 .ion-margin-top {
   --margin-top: var(--ion-margin, 16px);
+  margin-top: 16px;
   margin-top: var(--ion-margin, 16px);
 }
 .ion-margin-start {
   --margin-start: var(--ion-margin, 16px);
+  margin-left: 16px;
   margin-left: var(--ion-margin, 16px);
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .ion-margin-start {
     margin-left: unset;
+    -webkit-margin-start: 16px;
+    -webkit-margin-start: var(--ion-margin, 16px);
+    margin-inline-start: 16px;
     margin-inline-start: var(--ion-margin, 16px);
   }
 }
 .ion-margin-end {
   --margin-end: var(--ion-margin, 16px);
+  margin-right: 16px;
   margin-right: var(--ion-margin, 16px);
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .ion-margin-end {
     margin-right: unset;
+    -webkit-margin-end: 16px;
+    -webkit-margin-end: var(--ion-margin, 16px);
+    margin-inline-end: 16px;
     margin-inline-end: var(--ion-margin, 16px);
   }
 }
 .ion-margin-bottom {
   --margin-bottom: var(--ion-margin, 16px);
+  margin-bottom: 16px;
   margin-bottom: var(--ion-margin, 16px);
 }
 .ion-margin-vertical {
   --margin-top: var(--ion-margin, 16px);
   --margin-bottom: var(--ion-margin, 16px);
+  margin-top: 16px;
   margin-top: var(--ion-margin, 16px);
+  margin-bottom: 16px;
   margin-bottom: var(--ion-margin, 16px);
 }
 .ion-margin-horizontal {
   --margin-start: var(--ion-margin, 16px);
   --margin-end: var(--ion-margin, 16px);
+  margin-left: 16px;
   margin-left: var(--ion-margin, 16px);
+  margin-right: 16px;
   margin-right: var(--ion-margin, 16px);
 }
-@supports (margin-inline-start: 0) or (-webkit-margin-start: 0) {
+@supports ((-webkit-margin-start: 0) or (margin-inline-start: 0)) or (-webkit-margin-start: 0) {
   .ion-margin-horizontal {
     margin-left: unset;
     margin-right: unset;
+    -webkit-margin-start: 16px;
+    -webkit-margin-start: var(--ion-margin, 16px);
+    margin-inline-start: 16px;
     margin-inline-start: var(--ion-margin, 16px);
+    -webkit-margin-end: 16px;
+    -webkit-margin-end: var(--ion-margin, 16px);
+    margin-inline-end: 16px;
     margin-inline-end: var(--ion-margin, 16px);
   }
 }
@@ -1233,5 +1303,3 @@ sub {
 .ion-align-items-baseline {
   align-items: baseline !important;
 }
-
-/*# sourceMappingURL=styles.css.map*/

@@ -79,5 +79,6 @@ ionic cap sync
 
 ## Links:
 
+- [GIT Ignore Generator](https://www.toptal.com/developers/gitignore)
 - [Start Wars API](https://swapi.dev/)
 - [Email Composer](https://ionicframework.com/docs/native/email-composer)

@@ -26,8 +26,11 @@
     "@capacitor/ios": "3.2.5",
     "@capacitor/keyboard": "1.1.0",
     "@capacitor/status-bar": "1.0.3",
+    "@ionic-native/core": "^5.36.0",
+    "@ionic-native/email-composer": "^5.36.0",
     "@ionic/angular": "^5.5.2",
     "@ionic/lab": "^3.2.10",
+    "cordova-plugin-email-composer": "^0.9.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
