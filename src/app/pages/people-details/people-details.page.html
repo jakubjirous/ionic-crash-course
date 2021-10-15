@@ -8,60 +8,38 @@
 </ion-header>
 
 <ion-content class="ion-padding" *ngIf="people">
-    <ion-card *ngIf="people?.height">
+    <ion-card *ngIf="people?.name" class="card ion-margin">
         <ion-card-header>
-            <ion-card-title>Height</ion-card-title>
+            <ion-card-title>{{ people?.name }}</ion-card-title>
         </ion-card-header>
-        <ion-card-content>
-            {{ people?.height }}
-        </ion-card-content>
-    </ion-card>
-    <ion-card *ngIf="people?.mass">
-        <ion-card-header>
-            <ion-card-title>Mass</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ people?.mass }}
-        </ion-card-content>
-    </ion-card>
-    <ion-card *ngIf="people?.hair_color">
-        <ion-card-header>
-            <ion-card-title>Hair color</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ people?.hair_color }}
-        </ion-card-content>
-    </ion-card>
-    <ion-card *ngIf="people?.skin_color">
-        <ion-card-header>
-            <ion-card-title>Skin color</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ people?.skin_color }}
-        </ion-card-content>
-    </ion-card>
-    <ion-card *ngIf="people?.eye_color">
-        <ion-card-header>
-            <ion-card-title>Eye color</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ people?.eye_color }}
-        </ion-card-content>
-    </ion-card>
-    <ion-card *ngIf="people?.birth_year">
-        <ion-card-header>
-            <ion-card-title>Birth year</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ people?.birth_year }}
-        </ion-card-content>
-    </ion-card>
-    <ion-card *ngIf="people?.gender">
-        <ion-card-header>
-            <ion-card-title>Gender</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ people?.gender }}
-        </ion-card-content>
+
+        <ion-item lines="none" class="card__info" *ngIf="people?.height">
+            <ion-icon name="resize-outline" slot="start"></ion-icon>
+            Height: {{ people?.height }}
+        </ion-item>
+        <ion-item lines="none" class="card__info" *ngIf="people?.mass">
+            <ion-icon name="barbell-outline" slot="start"></ion-icon>
+            Mass: {{ people?.mass }}
+        </ion-item>
+        <ion-item lines="none" class="card__info" *ngIf="people?.hair_color">
+            <ion-icon name="color-palette-outline" slot="start"></ion-icon>
+            Hair Color: {{ people?.hair_color }}
+        </ion-item>
+        <ion-item lines="none" class="card__info" *ngIf="people?.skin_color">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            Skin Color: {{ people?.skin_color }}
+        </ion-item>
+        <ion-item lines="none" class="card__info" *ngIf="people?.eye_color">
+            <ion-icon name="eye-outline" slot="start"></ion-icon>
+            Eye Color: {{ people?.eye_color }}
+        </ion-item>
+        <ion-item lines="none" class="card__info" *ngIf="people?.birth_year">
+            <ion-icon name="medical-outline" slot="start"></ion-icon>
+            Birth Year: {{ people?.birth_year }}
+        </ion-item>
+        <ion-item lines="none" class="card__info" *ngIf="people?.gender">
+            <ion-icon name="transgender-outline" slot="start"></ion-icon>
+            Gender: {{ people?.gender }}
+        </ion-item>
     </ion-card>
 </ion-content>

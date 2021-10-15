@@ -160,7 +160,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title>Films</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n    <ion-list>\n        <ion-item button detail lines=\"inset\" *ngFor=\"let film of (films | async)?.results\" (click)=\"openDetails(film)\">\n            {{ film.title }}\n        </ion-item>\n    </ion-list>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar color=\"primary\">\n        <ion-title>Films</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"ion-padding\">\n    <ion-list>\n        <ion-item button detail lines=\"inset\" *ngFor=\"let film of (films | async)?.results\" (click)=\"openDetails(film)\">\n            {{ film?.title }}\n        </ion-item>\n    </ion-list>\n</ion-content>\n");
 
 /***/ })
 

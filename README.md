@@ -96,3 +96,17 @@ npm install @ionic/storage-angular
 - [GIT Ignore Generator](https://www.toptal.com/developers/gitignore)
 - [Start Wars API](https://swapi.dev/)
 - [Email Composer](https://ionicframework.com/docs/native/email-composer)
+- [Ionic Storage](https://github.com/ionic-team/ionic-storage)
+- [Color Generator](https://beta.ionicframework.com/docs/theming/color-generator)
+
+
+## Notes:
+
+Android Java Provider
+
+- Rename:
+```import android.support.v4.content.FileProvider;```
+
+- To:
+```import androidx.core.content.FileProvider;```
+

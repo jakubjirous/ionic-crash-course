@@ -6,10 +6,10 @@
         <ion-title>{{ film?.title }}</ion-title>
         <ion-buttons slot="end">
             <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
-                <ion-icon name="star" slot="icon-only"></ion-icon>
+                <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
             </ion-button>
             <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
-                <ion-icon name="star-outline" slot="icon-only"></ion-icon>
+                <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
@@ -17,52 +17,28 @@
 
 <ion-content class="ion-padding" *ngIf="film">
 
-    <ion-card *ngIf="film?.opening_crawl">
+    <ion-card *ngIf="film?.opening_crawl" class="card ion-margin">
         <ion-card-header>
-            <ion-card-title>{{ film?.title }}</ion-card-title>
+            <ion-card-title>Episode {{ film?.episode_id }}: {{ film?.title }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
             {{ film?.opening_crawl }}
         </ion-card-content>
+        <ion-item lines="none" class="card__info" *ngIf="film?.director">
+            <ion-icon name="videocam-outline" slot="start"></ion-icon>
+            Director: {{ film?.director }}
+        </ion-item>
+        <ion-item lines="none" class="card__info" *ngIf="film?.producer">
+            <ion-icon name="film" slot="start"></ion-icon>
+            Producer: {{ film?.producer }}
+        </ion-item>
+        <ion-item lines="none" class="card__info" *ngIf="film?.release_date">
+            <ion-icon name="calendar" slot="start"></ion-icon>
+            Release Date: {{ film?.release_date | date }}
+        </ion-item>
     </ion-card>
 
-    <ion-card *ngIf="film?.director">
-        <ion-card-header>
-            <ion-card-title>Director</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ film?.director }}
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card *ngIf="film?.producer">
-        <ion-card-header>
-            <ion-card-title>Producer</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ film?.producer }}
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card *ngIf="film?.release_date">
-        <ion-card-header>
-            <ion-card-title>Release date</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ film?.release_date }}
-        </ion-card-content>
-    </ion-card>
-
-    <ion-card *ngIf="film?.episode_id">
-        <ion-card-header>
-            <ion-card-title>Episode</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{ film?.episode_id }}
-        </ion-card-content>
-    </ion-card>
-
-    <ion-button expand="full" (click)="shareFilm()">
+    <ion-button expand="full" (click)="shareFilm()" class="ion-margin">
         Share by E-mail
     </ion-button>
 </ion-content>
