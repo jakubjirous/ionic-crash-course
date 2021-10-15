@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Film, IFilmsResponse } from '../../types/film';
 import { ApiService } from '../../services/api/api.service';
 import { UtilsService } from '../../services/utils/utils.service';
+import { Film, IFilmsResponse } from '../../types/film';
 
 @Component({
     selector: 'app-films',

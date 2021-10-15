@@ -91,6 +91,15 @@ Data storage
 npm install @ionic/storage-angular
 ```
 
+NGX Logger
+
+- NGX Logger is a simple logging module for angular (currently supports angular 6+). 
+- It allows "pretty print" to the console, as well as allowing log messages to be POSTed to a URL for server-side logging.
+
+```
+npm install --save ngx-logger
+```
+
 ## Links:
 
 - [GIT Ignore Generator](https://www.toptal.com/developers/gitignore)
@@ -98,7 +107,7 @@ npm install @ionic/storage-angular
 - [Email Composer](https://ionicframework.com/docs/native/email-composer)
 - [Ionic Storage](https://github.com/ionic-team/ionic-storage)
 - [Color Generator](https://beta.ionicframework.com/docs/theming/color-generator)
-
+- [NGX Logger](https://github.com/dbfannin/ngx-logger)
 
 ## Notes:
 
